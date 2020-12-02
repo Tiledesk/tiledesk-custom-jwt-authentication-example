@@ -1,0 +1,8 @@
+Set your PROJECT_ID and PROJECTSHAREDSECRET to .env file.
+Please refer to the following guide: https://developer.tiledesk.com/apis/authentication
+
+To just reply with a echo pass the value as query parameters. 
+
+Example: try with the following:
+
+https://tiledesk-custom-authentication-example.andrealeo83.repl.co/?id=123&firstname=andrea&lastname=leo&email=a.l@f21.it
