@@ -43,4 +43,4 @@ http.createServer(function (req, res) {
 
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end(token);
-}).listen(8080);
+}).listen(process.env.PORT || 3200);
