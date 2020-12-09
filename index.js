@@ -3,8 +3,13 @@ var http = require('http');
 var jwt = require('jsonwebtoken');
 const express = require('express');
 //const bodyParser = require('body-parser');
+var cors = require('cors');
+
 
 const app = express();
+
+app.use(cors());
+app.options('*', cors());
 
 app.get('/', (req, res) => { 
  //cors start
