@@ -12,38 +12,24 @@ app.use(cors());
 app.options('*', cors());
 
 app.get('/', (req, res) => { 
- //cors start
- const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'OPTIONS, POST, GET',
-    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-xsrf-token'
-  };
-
-  if (req.method === 'OPTIONS') {
-    res.writeHead(204, headers);
-    res.end();
-    return;
-  }
-  //cors end
  
-  const queryObject = url.parse(req.url,true).query;
 
-  var userId = queryObject.id;
+  var userId = req.query.id;
   console.log("userId", userId);
   
-  var password = queryObject.password;
+  var password = req.query.password;
   console.log("password", password);
  
   //Lookup the user on your DB or system
 
   // sampling echo - start
-  var firstname = queryObject.firstname;
+  var firstname = req.query.firstname;
   console.log("firstname", firstname);
 
-  var lastname = queryObject.lastname;
+  var lastname = req.query.lastname;
   console.log("lastname", lastname);
 
-  var email = queryObject.email;
+  var email = req.query.email;
   console.log("email", email);
 
 
@@ -54,7 +40,7 @@ app.get('/', (req, res) => {
     firstname: firstname,
     lastname: lastname,
     email: email,  
-    attributes: queryObject.attributes,
+    attributes: req.query.attributes,
     sub: 'userexternal',
     aud: 'https://tiledesk.com/projects/'+process.env.PROJECT_ID,  
   };
