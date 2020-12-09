@@ -10,8 +10,7 @@ http.createServer(function (req, res) {
  const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'OPTIONS, POST, GET',
-    'Access-Control-Max-Age': 2592000, // 30 days
-    /** add other headers as per requirement */
+    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization, x-xsrf-token';
   };
 
   if (req.method === 'OPTIONS') {
