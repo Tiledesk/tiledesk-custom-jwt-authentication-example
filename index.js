@@ -23,10 +23,10 @@ app.get('/', (req, res) => {
   //Lookup the user on your DB or system
 
   // sampling echo - start
-  var firstname = req.query.firstname;
+  var firstname = req.query.firstname || "n.a.";
   console.log("firstname", firstname);
 
-  var lastname = req.query.lastname;
+  var lastname = req.query.lastname || "n.a.";
   console.log("lastname", lastname);
 
   var email = req.query.email;
