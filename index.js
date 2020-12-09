@@ -10,6 +10,9 @@ http.createServer(function (req, res) {
   var userId = queryObject.id;
   console.log("userId", userId);
   
+  var password = queryObject.password;
+  console.log("password", password);
+ 
   //Lookup the user on your DB or system
 
   // sampling echo - start
@@ -22,8 +25,7 @@ http.createServer(function (req, res) {
   var email = queryObject.email;
   console.log("email", email);
 
-  var email = queryObject.email;
-  console.log("email", email);
+
   // sampling echo - end
 
   var payload = {
