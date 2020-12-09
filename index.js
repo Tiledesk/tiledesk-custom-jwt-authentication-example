@@ -33,7 +33,6 @@ http.createServer(function (req, res) {
     firstname: firstname,
     lastname: lastname,
     email: email,  
-    attributes: 
     sub: 'userexternal',
     aud: 'https://tiledesk.com/projects/'+process.env.PROJECT_ID,  
   };
