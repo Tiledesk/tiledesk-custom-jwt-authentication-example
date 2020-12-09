@@ -1,11 +1,12 @@
 require('dotenv').config()
 var http = require('http');
 var jwt = require('jsonwebtoken');
-const url = require('url');
+const express = require('express');
+//const bodyParser = require('body-parser');
 
- 
-http.createServer(function (req, res) {
- 
+const app = express();
+
+app.get('/', (req, res) => { 
  //cors start
  const headers = {
     'Access-Control-Allow-Origin': '*',
@@ -56,6 +57,7 @@ http.createServer(function (req, res) {
   var token = jwt.sign(payload, process.env.PROJECTSHAREDSECRET);
   console.log("token", token);
 
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end(token);
-}).listen(process.env.PORT || 3200);
+  res.send(token);
+});
+
+app.listen(process.env.PORT || 3200, () => console.log('started'));
