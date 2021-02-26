@@ -5,4 +5,4 @@ To just reply with a echo pass the value as query parameters.
 
 Example: try with the following:
 
-https://tiledesk-custom-authentication-example.andrealeo83.repl.co/?id= 5e5f4e220b28440012117be4_12345678&firstname=andrea&lastname=leo&email=a.l@f21.it
+https://tiledesk-custom-authentication-example.andrealeo83.repl.co/?id=5e5f4e220b28440012117be4_12345678&firstname=andrea&lastname=leo&email=a.l@f21.it
